@@ -5,7 +5,7 @@
 }
 
 body{
-  backround:black;
+  background:black;
   width:100%;
 }
 
@@ -13,7 +13,7 @@ header{
   width:100%;
   background-image:url('');
   background-repeat:no-repeat;
-  backkground-position:center;
+  background-position:center;
   position:absolute;
 }
 
@@ -38,7 +38,7 @@ header nav .middle{
 }
 
 header nav .middle ul{
-  dislay:flex;
+  display:flex;
   flex-direction:row;
 }
 
