@@ -55,3 +55,30 @@ body.show-chatbot .chatbot-toggler span:last-child {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
 }
+body.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.chatbot header {
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+header h2 {
+  font-size: 1.2rem;
+}
