@@ -30,3 +30,4 @@ const generateResponse = (chatElement) => {
             messages: [{ role: "user", content: chatInput.value.trim() }]
         })
     };
+}
