@@ -1,1 +1,26 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:white;
+  font-size:17px;
+}
+
+.chatbot-toggler{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  height:60px;
+  display: flex;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: blue;
+  transition:all 0.2s ease;
+}
+
 
