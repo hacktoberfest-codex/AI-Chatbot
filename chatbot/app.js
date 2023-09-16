@@ -31,3 +31,23 @@ const generateResponse = (chatElement) => {
         })
     };
 }
+ fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+        const responseMessage = data.choices[0].message.content.trim();
+            messageElement.textContent = responseMessage;
+           
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+        messageElement.textContent = data.choices[0].message.content.trim();
+    }).catch(() => {
+        messageElement.classList.add("error");
+        messageElement.textContent = "Oops! Something went wrong. Please try again.";
+    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+}
+const handleChat = () => {
+    userMessage = chatInput.value.trim(); 
+    if(!userMessage) return;
+
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+      3
+    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
