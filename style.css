@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 *{
   padding:0;
   margin:0;
@@ -6,93 +9,66 @@
 
 body{
   background:black;
-  width:100%;
+  font-family:'Poppins',sans-serif;
+  margin:8px;
 }
 
 header{
-  width:100%;
-  background-image:url('');
-  background-repeat:no-repeat;
-  background-position:center;
-  position:absolute;
+  width:90%;
+  height:5%;
+  margin:auto;
 }
 
 header nav{
+ width:90%;
+  height:7%;
+  margin:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+header nav img{
+  width:193px;
+  height:90px;
+  background-color:transparent;
+}
+
+header nav ul{
+ list-style:none;
   display:flex;
-  flex-direction:row;
 }
 
-header nav .logo{
-  width:50px;
-  display:inline;
-  height:20px;
+header nav ul li{
+  padding:3px 19px;
 }
 
-header nav .logo img{
-  width:350px;
-  height:300px;
+header nav ul li:nth-last-child(1){
+  background:#438eb1fd;
+  border-radius:20px;
+  padding:5px 20px;
 }
 
-header nav .middle{
-  width:50%;
+header nav ul li::nth-last-child(1) a{
+  color:#fffefe;
 }
 
-header nav .middle ul{
-  display:flex;
-  flex-direction:row;
+header nav ul li a{
+  text-decoration:none;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:500;
+  transition:0.3s linear;
 }
 
-header nav .middle ul li{
-  list-style:none;
-  font-size:30px;
+header nav ul li a:hover{
+  color:gray(102,102,102);
 }
 
-.right{
-  height:100px;
-}
-
-.right ul.outer svg{
-  height:50px;
-  width:50px;
-}
-
-ul.outer{
-  display:inline;
-}
-
-ul.outer:hover{
-  position:relative;
-}
-
-ul.inner{
+header nav .bi-three-dots{
   display:none;
 }
 
-.side_bar{
-  position:relative;
-  right:19px;
-}
-
-ul.inner li{
-  background-color:white;
-  color:black;
-  font-weight:bolder;
-}
-
-.ghost ul.inner_ghost{
-    background-color:white;
-  color:black;
-  font-weight:bolder;
-}
-
-
-.ghost{
-  display:none;
-}
-
-.ghost .inner_ghost{
-  display:none;
-}
 
 
 header .content {
