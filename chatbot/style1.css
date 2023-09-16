@@ -23,4 +23,35 @@ body{
   transition:all 0.2s ease;
 }
 
+body.show-chatbot .chatbot-toggler {
+  transform: rotate(180deg);
+}
 
+.chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child {
+  opacity: 0;
+}
+
+body.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+
+.chatbot {
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transform-origin: bottom right;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
