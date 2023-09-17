@@ -228,24 +228,24 @@ header .trip_bx .travel_bx .cards .card img{
 header .trip_bx .travel_bx .cards .card .btn_city{
    display: flex;
    align-items: center;
-   justify-content: space-evenly;
+   justify-content: space-between;
  
 }
 header .trip_bx .travel_bx .cards .card .btn_city a{
    text-decoration: none;
    background: #000000;
    color: #fff;          
-   border-radius: 50px;
-   padding: 10px 20px;    
-   font-size: 20px;
+   border-radius: 20px;
+   padding: 6px 20px;    
+   font-size: 11px;
    transition: .3s linear;
 }
 header .trip_bx .travel_bx .cards .card .btn_city a:hover{
-   background: blue;
+   background: gray;
 }
 header .trip_bx .travel_bx .cards .card .btn_city h5{
-   font-size: 18px;
-   font-weight: bolder;  
+   font-size: 11px;
+   font-weight: 500;  
    margin:0;
    margin-top: 5px;
    line-height: 15px;       
@@ -259,7 +259,6 @@ header .trip_bx .travel_bx .cards .card .btn_city h5 span{
     position: relative;
     width: 70%;
     height: auto;
-    /* border: 1px solid black; */
     margin: auto;
     color: rgb(255, 255, 255);
     display: flex;
@@ -273,7 +272,6 @@ header .trip_bx .travel_bx .cards .card .btn_city h5 span{
     
     .explore_bx p{
         font-size: 12px;
-        /* width: 400px; */
         text-align: center;
     }
     .explore_bx .explore_cards{
@@ -282,14 +280,12 @@ header .trip_bx .travel_bx .cards .card .btn_city h5 span{
        justify-content:space-between;
        flex-wrap: wrap;
        margin-top: 20px ;
-       /* border: 1px solid white; */
     
     }
     .explore_bx .explore_cards .exp_cards{
        position: relative;
        width: 190px ;
     height: 190px;
-    /* border: 1px solid black; */
      margin: 10px 10px 0px 10px;
      transition: .3s;
      color: whitesmoke;
