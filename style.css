@@ -154,7 +154,7 @@ header .trip_bx .search_bx .card input{
     margin-top: 3px;
     padding: 5px 0px;
     border:none;
-    outline:none:
+    outline:none;
     font-size: 13px;   
 }
 header .trip_bx .search_bx input[type="button"]{
