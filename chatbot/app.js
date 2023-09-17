@@ -81,3 +81,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+function createSubOptions(container, mainOption, subOptions) {
+    const subOptionsDiv = document.createElement("div");
+    subOptionsDiv.classList.add("sub-options");
+
+    const mainOptionButton = document.createElement("button");
+    mainOptionButton.classList.add("option-button", "sub-option");
+    mainOptionButton.setAttribute("data-response", mainOption);
+    mainOptionButton.innerText = mainOption;
+
+    subOptionsDiv.appendChild(mainOptionButton);
+
+    subOptions.forEach(subOption => {
+        const subOptionButton = document.createElement("button");
+        subOptionButton.classList.add("option-button", "sub-option");
+        subOptionButton.setAttribute("data-response", subOption.label.toLowerCase()); // Convert to lowercase
+        subOptionButton.innerText = subOption.label;
+        subOptionsDiv.appendChild(subOptionButton);
+
+        subOptionButton.title = subOption.description;
+    });
+
+    container.appendChild(subOptionsDiv);
+}
