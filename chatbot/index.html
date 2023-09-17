@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Chatbot in JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<script src="app.js" defer></script>
-  </head>
-  <body>
-    <button class="chatbot-toggler">
-      <span class="material-symbols-rounded">travel</span>
-      <span class="material-symbols-outlined">travel</span>
-    </button>
-     <div class="chatbot">
-        
-        <header>
-          <h2><span class="material-symbols-outlined">travel</span> Travel Guide</h2>
-          <span class="close-btn material-symbols-outlined">X</span>
-        </header>
-        <ul class="chatbox">
-            <li class="chat incoming">
-          <span class="material-symbols-outlined">travel</span>
-          <p>Good Morning <br>How may I assist you?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea placeholder="Enter your doubt please...." spellcheck="false" required></textarea>
-        <span id="travel-btn" class="material-symbols-rounded">send</span>
-        <button id="voice-input-button" class="material-symbols-rounded">mic</button>
-      </div>
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Chatbot</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Travel Assistance Chat</div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">Hello and Welcome to the Travel Assistance Chat! I am your virtual travel advisor, ready to assist you with your travel plans.</div>
+            <div class="bot-message">Please choose one of the options below so we can help you with your travel needs:</div>
+        </div>
+        <div class="options" id="option-container">
+            <button class="option-button" data-response="destination">Destination Planning</button>
+            <button class="option-button" data-response="bookings">Travel Bookings</button>
+            <button class="option-button" data-response="essentials">Travel Essentials</button>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
     </div>
- </body>
-  </html>
+    <script src="ap.js"></script>
+</body>
+</html>
