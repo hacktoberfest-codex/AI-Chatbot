@@ -78,10 +78,6 @@ const createChatLi = (message, className) => {
         }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
     }
 
-   
-
-   
-
     const handleUserMessage = () => {
          userMessage = chatInput.value.trim();
         if (userMessage) {
