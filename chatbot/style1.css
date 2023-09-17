@@ -1,129 +1,101 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-  background:white;
-  font-size:17px;
+.chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.chatbot-toggler{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  height:60px;
-  display: flex;
-  cursor:pointer;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background: blue;
-  transition:all 0.2s ease;
+.chat-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-body.show-chatbot .chatbot-toggler {
-  transform: rotate(180deg);
+.chat-messages {
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
 }
 
-.chatbot-toggler span {
-  color: #fff;
-  position: absolute;
+.bot-message {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
-.chatbot-toggler span:last-child,
-body.show-chatbot .chatbot-toggler span:first-child {
-  opacity: 0;
+.options {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    border-radius: 25px;
+    text-align: center;
 }
 
-body.show-chatbot .chatbot-toggler span:last-child {
-  opacity: 1;
+button.option-button{
+    background-color: gray;
+    color: white;
 }
 
-.chatbot {
-  position: fixed;
-  right: 10px;
-  bottom: 70px;
-  width: 300px;
-  background: white;
-  border-radius: 10px;
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.9);
-  transform-origin: bottom right;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease;
-}
-body.show-chatbot .chatbot {
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
-}
-#voice-input-button {
-  background: #007bff; 
-  color: #fff; 
-  font-size: 1.2rem;
-  padding: 8px 12px; 
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 10px; 
+.option-button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    display: block;
+    width: 70%;
+    text-align: center;
+    font-size: 14px; /* Adjusted font size */
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 
-#voice-input-button:hover {
-  background: #0056b3;
+.sub-options{
+    display: flex;
+    width: 80%;
+    position: relative;
+    right: -22%;
+    text-align: center;
+    flex-direction: column;
+}
+.sub-options .option-button {
+    margin: 5px;
+    padding: 8px 12px; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    /* width: 30%; */
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px; 
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.chatbot header {
-  background-color: blue;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+.sub-option:hover{
+    background-color: gray;
+    color: white;
 }
 
-.close-btn {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: red;
-}
-
-header h2 {
-  font-size: 1.2rem;
-}
-.chatbot .chatbox {
-  overflow-y: auto;
-  max-height: 400px; 
-  padding: 20px;
-}
-
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
-  width: 6px;
-}
-
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
-  background: #f0f0f0; 
-  border-radius: 25px;
-}
-
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 25px;
-}
-
-
-.chatbox .chat {
-  display: flex;
-  list-style: none;
-}
-
-.chatbox .outgoing {
-  margin: 15px 0; 
-  justify-content: flex-end;
+.option-button:hover, .sub-options .option-button:hover {
+    background-color: #0056b3;
 }
