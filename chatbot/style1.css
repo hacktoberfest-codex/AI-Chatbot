@@ -60,6 +60,21 @@ body.show-chatbot .chatbot {
   pointer-events: auto;
   transform: scale(1);
 }
+#voice-input-button {
+  background: #007bff; 
+  color: #fff; 
+  font-size: 1.2rem;
+  padding: 8px 12px; 
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px; 
+}
+
+
+#voice-input-button:hover {
+  background: #0056b3;
+}
 
 .chatbot header {
   background-color: blue;
@@ -81,4 +96,34 @@ body.show-chatbot .chatbot {
 
 header h2 {
   font-size: 1.2rem;
+}
+.chatbot .chatbox {
+  overflow-y: auto;
+  max-height: 400px; 
+  padding: 20px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+  border-radius: 25px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+
+.chatbox .outgoing {
+  margin: 15px 0; 
+  justify-content: flex-end;
 }
