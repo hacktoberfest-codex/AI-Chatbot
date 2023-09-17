@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const conversationHistory = [];
 let userMessage = null; 
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = "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"; 
 const inputInitHeight = chatInput.scrollHeight;
 
     const createChatMessage = (message, role) => {
